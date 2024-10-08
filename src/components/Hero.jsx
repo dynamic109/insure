@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Flex, Heading, Image, Text, Stack } from "@chakra-ui/react";
 import HeroImageMobile from "../images/image-intro-mobile.jpg";
 
-function Hero({ isView }) {
+function Hero() {
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}

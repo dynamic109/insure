@@ -1,5 +1,4 @@
-import { Flex, Heading, Image, Box, Text } from "@chakra-ui/react";
-// import { base } from "framer-motion/client";
+import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 function About({ FeaturesData }) {

@@ -9,6 +9,7 @@ import AffordablePricesIcon from "./images/icon-affordable-prices.svg";
 import PeopleFirstIcon from "./images/icon-people-first.svg";
 import Aside from "./components/Aside";
 import { Flex } from "@chakra-ui/react";
+import Footer from "./components/Footer";
 
 function App() {
   const [isView, setIsView] = useState(false);
@@ -34,8 +35,9 @@ function App() {
       <NavBar isView={isView} setIsView={setIsView} />
       <Flex direction={"column"} display={isView && "none"}>
         <Hero isView={isView} />
-        <About FeaturesData={FeaturesData} />\
+        <About FeaturesData={FeaturesData} />
         <Aside />
+        <Footer />
       </Flex>
     </div>
   );

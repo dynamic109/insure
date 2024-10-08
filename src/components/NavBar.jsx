@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Flex, Image, Link } from "@chakra-ui/react";
 import Logo from "../images/logo.svg";
@@ -6,7 +6,7 @@ import MenuIcon from "../images/icon-hamburger.svg";
 import CloseIcon from "../images/icon-close.svg";
 import Menu from "./Menu";
 
-function NavBar({isView, setIsView}) {
+function NavBar({ isView, setIsView }) {
   const toggle = () => {
     setIsView(!isView);
   };
