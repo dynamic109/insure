@@ -7,6 +7,8 @@ import About from "./components/About";
 import SnappyProcessIcon from "./images/icon-snappy-process.svg";
 import AffordablePricesIcon from "./images/icon-affordable-prices.svg";
 import PeopleFirstIcon from "./images/icon-people-first.svg";
+import Aside from "./components/Aside";
+import { Flex } from "@chakra-ui/react";
 
 function App() {
   const [isView, setIsView] = useState(false);
@@ -30,8 +32,11 @@ function App() {
   return (
     <div>
       <NavBar isView={isView} setIsView={setIsView} />
-      <Hero isView={isView} />
-      <About FeaturesData={FeaturesData} />
+      <Flex direction={"column"} display={isView && "none"}>
+        <Hero isView={isView} />
+        <About FeaturesData={FeaturesData} />\
+        <Aside />
+      </Flex>
     </div>
   );
 }

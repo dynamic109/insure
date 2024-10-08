@@ -5,7 +5,6 @@ import HeroImageMobile from "../images/image-intro-mobile.jpg";
 function Hero({ isView }) {
   return (
     <Flex
-      display={isView && "none"}
       direction={{ base: "column", lg: "row" }}
       backgroundImage={
         "url('../images/bg-pattern-intro-left-mobile.svg'), url('../images/bg-pattern-intro-right-mobile.svg')"
