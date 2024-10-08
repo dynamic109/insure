@@ -9,6 +9,14 @@ const breakpoints = {
   "2xl": "96em", // ~1536px
 };
 
-const theme = extendTheme({ breakpoints });
+const theme = extendTheme(
+  {
+    fonts: {
+      heading: `"DM Serif Display"`,
+      body: `"Karla", sans-serif`,
+    },
+  },
+  breakpoints
+);
 
 export default theme;

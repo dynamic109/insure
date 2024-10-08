@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
-import { Flex, Image, Stack, Link } from "@chakra-ui/react";
+import { Flex, Image, Link } from "@chakra-ui/react";
 import Logo from "../images/logo.svg";
 import MenuIcon from "../images/icon-hamburger.svg";
 import CloseIcon from "../images/icon-close.svg";
 import Menu from "./Menu";
 
-function NavBar() {
-  const [isView, setIsView] = useState(false);
-
+function NavBar({isView, setIsView}) {
   const toggle = () => {
     setIsView(!isView);
   };
@@ -20,9 +18,14 @@ function NavBar() {
         alignItems={"center"}
         padding={{ base: "20px", md: "30px" }}
       >
-        <Image src={Logo} height={{ base: "15px", md: "32px" }} />
+        <Image
+          src={Logo}
+          alt="Insure logo"
+          height={{ base: "15px", md: "32px" }}
+        />
         <Image
           src={isView ? CloseIcon : MenuIcon}
+          alt={isView ? "Close Icon" : "Menu Icon"}
           height={{ base: "30px", md: "45px" }}
           display={{ base: "block", md: "none" }}
           onClick={toggle}
