@@ -1,8 +1,6 @@
 import React from "react";
-import { Button, Flex, Heading, Image, Text,Stack  } from "@chakra-ui/react";
+import { Button, Flex, Heading, Image, Text, Stack } from "@chakra-ui/react";
 import HeroImageMobile from "../images/image-intro-mobile.jpg";
-import HeroImageDesktop from "../images/image-intro-desktop.jpg";
-import HeroBgLeft from "../images/bg-pattern-intro-left-mobile.svg";
 
 function Hero({ isView }) {
   return (
@@ -49,12 +47,13 @@ function Hero({ isView }) {
           position="relative"
           zIndex="1"
           gap={"40px"}
+          px={{ base: "40px", md: "100px", lg: "0" }}
         >
           {/* <hr width={"100px"} display={{ base: "none", md: "block" }} /> */}
           <Text
             maxW={"200px"}
             display={{ base: "none", lg: "block" }}
-            border={"2px solid grey"}
+            border={"1px solid grey"}
           ></Text>
           <Stack>
             <Heading
